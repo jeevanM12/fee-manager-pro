@@ -9,17 +9,21 @@
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!-- React Development Build - Not for Production -->
+
+    <!-- React Development Build - IMPORTANT: For production, use react.production.min.js and react-dom.production.min.js -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <!-- Babel for JSX transformation (for local development, consider a build step for production) -->
+
+    <!-- Babel for JSX transformation (MUST be loaded before your React scripts) -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <!-- Your React app entry point -->
-    <script type="module" src="./src/index.js"></script>
+    <!-- Use type="text/babel" to tell Babel to process this script -->
+    <script type="text/babel" src="./src/index.js"></script>
 </body>
 </html>
